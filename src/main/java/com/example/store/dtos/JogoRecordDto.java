@@ -2,5 +2,14 @@ package com.example.store.dtos;
 
 import jakarta.validation.constraints.NotBlank;
 
-public record JogoRecordDto(@NotBlank String nome, @NotBlank String genero, @NotBlank String plataforma,@NotBlank int qtd_estoque) {
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PositiveOrZero;
+
+public record JogoRecordDto(
+    @NotBlank String nome,
+    @NotBlank String genero,
+    @NotBlank String plataforma,
+    @NotNull @PositiveOrZero int qtdEstoque,
+    @NotNull double valor
+) {
 }

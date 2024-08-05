@@ -17,7 +17,8 @@ public class JogoModel extends RepresentationModel<JogoModel> implements Seriali
     String nome;
     String genero;
     String plataforma;
-    int QtdEstoque;
+    int qtdEstoque;
+    double valor;
 
     public UUID getIdJogo() {
         return idJogo;
@@ -52,10 +53,18 @@ public class JogoModel extends RepresentationModel<JogoModel> implements Seriali
     }
 
     public int getQtdEstoque() {
-        return QtdEstoque;
+        return qtdEstoque;
     }
 
     public void setQtdEstoque(int qtdEstoque) {
-        QtdEstoque = qtdEstoque;
+        this.qtdEstoque = qtdEstoque;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
     }
 }
